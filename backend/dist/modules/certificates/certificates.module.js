@@ -12,12 +12,16 @@ const typeorm_1 = require("@nestjs/typeorm");
 const certificates_service_1 = require("./certificates.service");
 const certificates_controller_1 = require("./certificates.controller");
 const certificate_entity_1 = require("./entities/certificate.entity");
+const webhooks_module_1 = require("../webhooks/webhooks.module");
 let CertificatesModule = class CertificatesModule {
 };
 exports.CertificatesModule = CertificatesModule;
 exports.CertificatesModule = CertificatesModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([certificate_entity_1.Certificate])],
+        imports: [
+            typeorm_1.TypeOrmModule.forFeature([certificate_entity_1.Certificate]),
+            webhooks_module_1.WebhooksModule,
+        ],
         controllers: [certificates_controller_1.CertificatesController],
         providers: [certificates_service_1.CertificatesService],
     })

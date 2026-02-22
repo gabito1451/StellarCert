@@ -16,6 +16,7 @@ const auth_module_1 = require("./modules/auth/auth.module");
 const users_module_1 = require("./modules/users/users.module");
 const certificates_module_1 = require("./modules/certificates/certificates.module");
 const issuers_module_1 = require("./modules/issuers/issuers.module");
+const webhooks_module_1 = require("./modules/webhooks/webhooks.module");
 const typeorm_config_1 = require("./config/typeorm.config");
 const environment_config_1 = require("./config/environment.config");
 let AppModule = class AppModule {
@@ -33,6 +34,7 @@ exports.AppModule = AppModule = __decorate([
             users_module_1.UsersModule,
             certificates_module_1.CertificatesModule,
             issuers_module_1.IssuersModule,
+            webhooks_module_1.WebhooksModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

@@ -7,6 +7,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { CertificatesModule } from './modules/certificates/certificates.module';
 import { IssuersModule } from './modules/issuers/issuers.module';
+import { WebhooksModule } from './modules/webhooks/webhooks.module';
 import { typeOrmConfig } from './config/typeorm.config';
 import { validateEnv } from './config/environment.config';
 
@@ -21,8 +22,9 @@ import { validateEnv } from './config/environment.config';
     UsersModule,
     CertificatesModule,
     IssuersModule,
+    WebhooksModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
